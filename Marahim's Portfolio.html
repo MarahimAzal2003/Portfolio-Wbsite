@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marahim's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(3, 57, 57);
+            color: white;
+            font-family: 'poppins', sans-serif;
+        }
+
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(5, 77, 77);
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            top: 0px;
+
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: hotpink;
+        }
+
+        .left {
+            font-size: 2rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            margin: 80px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftsection {
+            font-size: 2.5rem;
+            margin-top: 90px;
+
+        }
+
+        .rightsection img {
+            width: 100%;
+            margin-top: 0px;
+            padding: 0%;
+
+        }
+
+        .pink {
+            color: hotpink;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 50px;
+        }
+
+        hr {
+            margin: 0 50px;
+            background: hotpink;
+
+        }
+
+        .heading .head {
+            width: 14%;
+            margin: auto;
+            margin-bottom: 30px;
+            border-radius: 100%;
+        }
+
+        h2 {
+            padding-left: 50px;
+            padding-top: 50px;
+        }
+
+        .secondsection {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 80px 0;
+        }
+
+
+
+
+        .leftdiv img {
+            width: 60%;
+            margin-left: 80px
+        }
+
+        .rightdiv {
+            width: 50%;
+            padding-top: 20px;
+            padding-right: 120px;
+            font-size: 1.3rem;
+        }
+
+        .thirdsection .box-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            padding: 20px 0 5px 0px;
+            margin: 20px;
+        }
+
+        .thirdsection .box-container .box {
+
+            border-radius: 5px;
+            background: rgb(5, 77, 77);
+            text-align: center;
+            font-size: 1rem;
+            padding: 30px 10px;
+        }
+
+        .thirdsection .box-container .box img {
+            height: 100px;
+
+        }
+
+        .fourthsection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .fourthsection .line {
+            background: white;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+
+        }
+
+        .fourthsection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 100px;
+
+        }
+
+        .image-top {
+            width: 35px;
+            position: relative;
+            top: -38px;
+            left: -15px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+            font-size: 1.5rem;
+            color: hotpink;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            width: 150px;
+            font-size: 15px;
+
+        }
+
+        .fifthsection {
+            height: 60vw;
+        }
+
+        .container {
+            display: flex;
+            gap: 30px;
+            max-width: 85%;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            margin: 5% auto 100px auto;
+            height: fit-content;
+        }
+
+        .container .block {
+            border-radius: 5px;
+            background-color: rgb(5, 77, 77);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container .block img {
+            width: 100%;
+        }
+
+        .container .block serv-img {
+            width: 50%;
+        }
+
+        .container .block h3 {
+            font-size: 1.5rem;
+            padding: 10px 0;
+            color: hotpink;
+        }
+
+
+        .container .proj-img {
+            width: 220px;
+        }
+
+        .form-body {
+            display: flex;
+            justify-content: space-around;
+            width: 75%;
+            margin: 100px auto;
+        }
+
+        .form-left {
+            height: auto;
+            width: 40%;
+            /* background-color: #9c97f1; */
+        }
+
+        .form-left-data {
+            display: flex;
+            margin: 30px 0px;
+        }
+
+
+        .form-left-text {
+            padding: 1px 10px;
+        }
+
+        .form-right {
+            height: auto;
+            text-align: center;
+            width: 58%;
+        }
+
+        .form-right .form input[type=text] {
+            width: 35%;
+            background: rgb(5, 77, 77);
+            outline: none;
+            border: none;
+            padding: 4px 10px;
+            font-size: 1.2rem;
+            color: #fff;
+            border-bottom: 1px solid #fff;
+            margin: 3px 0px 15px 0px;
+        }
+
+        .form-right .form input[type=email] {
+            width: 70.3%;
+            background: rgb(5, 77, 77);
+            outline: none;
+            border: none;
+            padding: 4px 10px;
+            font-size: 1.2rem;
+            color: #fff;
+            border-bottom: 1px solid #fff;
+            margin: 3px 0px 15px 0px;
+        }
+
+
+        .form-right .form input[type=tel] {
+            width: 70.3%;
+            background: rgb(5, 77, 77);
+            outline: none;
+            border: none;
+            padding: 4px 10px;
+            font-size: 1.2rem;
+            color: #fff;
+            border-bottom: 1px solid #fff;
+
+            margin: 3px 0px 15px 0px;
+        }
+
+        .form-right .form textarea {
+            width: 70.3%;
+            background: rgb(5, 77, 77);
+            outline: none;
+            border: none;
+            padding: 4px 10px;
+            font-size: 1.2rem;
+            color: #fff;
+            margin: 3px 0px 15px 0px;
+        }
+
+        .form-right .form input[type=submit] {
+            background: rgb(5, 77, 77);
+            padding: 4px 14px;
+            font-size: 1.2rem;
+            color: #fff;
+            border-color: #fff;
+            border-radius: 3px;
+        }
+        footer{
+            height: 25vw;
+            background: rgb(213, 56, 135);
+            border-top-left-radius: 80px ;
+            border-top-right-radius: 80px ;
+            
+        }
+        .row{
+            width: 85%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap:wrap ;
+            align-items: flex-start;
+        }
+        .col{
+            flex-basis: 25%;
+            padding: 30px;
+            margin: 0px;
+        }
+        .col li {
+            list-style: none;
+
+        }
+        .col li a{
+            text-decoration: none;
+            color: #fff;
+        }
+        footer .col img{
+            width: 100%;
+            height: 100%;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">MARAHIM'S PORTFOLIO</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/">ABOUT</a></li>
+                    <li><a href="/">SERVICES</a></li>
+                    <li><a href="/">CONTACT ME</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftsection">
+                HI, MY NAME IS <span class="pink">MARAHIM</span>
+                <div>I'M A STUDENT AND A WEB DEVELOPER</div>
+            </div>
+            <div class="rightsection">
+                <img src="bg.png" alt="">
+            </div>
+
+        </section>
+
+        <hr>
+        <div class="heading">
+            <h1 id="about">ABOUT ME</h1>
+            <hr class="head">
+        </div>
+
+        <section class="secondsection">
+
+
+            <div class="leftdiv">
+                <img src="image.png" alt="">
+            </div>
+            <div class="rightdiv">As a Computer Programmer, I am passionate about writing code and developing high
+                quality software that meets the needs of clients. My background in Computer Science, coupled with my
+                commitment to using best programming practices and tools available, makes me a valuable asset to any
+                software development team </div>
+
+
+        </section>
+
+
+        <section class="thirdsection">
+            <h2>MY EDUCATIONAL BACKGROUND:</h2>
+
+            <div class="box-container">
+                <div class="box">
+                    <img src="APSACS.jpg" alt="">
+                    <P>I did my Matric from Army Public School Peshawar. I secured 1040/1100 Marks with A1 Grade
+                    </P>
+                </div>
+
+                <div class="box">
+                    <img src="PGC.jpg" alt="">
+                    <P>I finished College from Hadaf Group Of Colleges Peshawar. I secured 850/1100 Marks with A
+                        Grade </P>
+                </div>
+
+                <div class="box">
+                    <img src="AGR.jpg" alt="">
+                    <P>I am currently enrolled in Bachelors of Information Technology from Agriculture University
+                        Peshawar</P>
+                </div>
+
+            </div>
+
+        </section>
+        <section class="fourthsection">
+
+            <h2>WORK EXPERIENCE:</h2>
+
+            <div class="line">
+                <div class="vertical">
+                    <img style="border-radius: 8px;" class="image-top" src="adobe.jpg" alt="">
+                    <div class="vertical-title">
+                        GRAPHIC DESIGNING
+                    </div>
+                    <div class="vertical-desc">I have three months working experience in graphic designing as a
+                        beginner with encoder bytes</div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="html.png" alt="">
+                    <div class="vertical-title">
+                        HTML DEVELOPER
+                    </div>
+                    <div class="vertical-desc">I have two months working experience as a beginner with National
+                        Vocational Technical Training Commission</div>
+                </div>
+
+                <div class="vertical">
+
+
+                    <img class="image-top" src="CSS.png" alt="">
+                    <div class="vertical-title">
+                        CSS DEVELOPER
+                    </div>
+                    <div class="vertical-desc">I have two months working experience as a beginner with National
+                        Vocational Technical Training Commission</div>
+                </div>
+
+                <div class="vertical">
+
+
+                    <img class="image-top" src="boot.png" alt="">
+                    <div class="vertical-title">
+                        BOOTSTRAP DEVELOPER
+                    </div>
+                    <div class="vertical-desc">I have two months working experience as a beginner with National
+                        Vocational Technical Training Commission</div>
+                </div>
+
+                <div class="vertical">
+
+
+                    <img class="image-top" src="java.png" alt="">
+                    <div class="vertical-title">
+                        JAVASCRIPT PROGRAMMER
+                    </div>
+                    <div class="vertical-desc">I have one month working experience as a beginner with National
+                        Vocational Technical Training Commission</div>
+                </div>
+
+
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section class="fifthsection">
+            <div class="heading">
+                <h1 id="sevices">SERVICES</h1>
+                <hr class="head">
+
+            </div>
+
+            <div class="container">
+                <div class="block">
+                    <img class="serv-img" src="webd.png" alt="">
+                    <h3>WEB DESIGNING</h3>
+                    <P>I have engaged in web design projects where i collaborated with my team to create visually appealing and user friendly layouts. While my experience is limited, I am enthusiastic about expanding my skills and contributing to innovative web design projects. </P>
+                </div>
+
+                <div class="block">
+                    <img class="serv-img" src="abcd.png" alt="">
+                    <h3>WEB DEVELOPMENT</h3>
+                    <P>During my early foray into web development, I gained minor experience in creating website layouts using HTML and CSS. This minor experience ignited my passion for web development and laid the foundation for further growth in this dynamic field.</P>
+                </div>
+
+                <div class="block">
+                    <img class="serv-img" src="graphics-design.png" alt="">
+                    <h3>GRAPHIC DESIGNING</h3>
+                    <P>In my explorations of graphic design, I became proficient in utilizing design software like Adobe Illustrator and Photoshop, allowing me to translate ideas into compelling visuals. While my graphic design experience is minor, it has fueled my enthusiasm to further develop my skills. </P>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!--<section class="sixthsection">
+            <div class="heading">
+                <h1 id="projects">Projects</h1>
+                <hr class="head">
+            </div>
+
+            <div class="container">
+                <div class="block">
+                    <img class="serv-img" src="dev.jpg" alt="">
+                    <h3>WEB DEVELOPMENT</h3>
+                    <P>PORTFOLIO WEBSITE</P>
+                    <a style="color: hotpink;" href="#" class="code">Source Code</a>
+                </div>
+
+                <div class="block">
+                    <img class="serv-img" src="DEP.jpg" alt="">
+                    <h3>WEB DEVELOPMENT</h3>
+                    <P>PORTFOLIO WEBSITE</P>
+                    <a style="color:hotpink;" href="#" class="code">Source Code</a>
+                </div>
+
+                <div class="block">
+                    <img class="serv-img" src="DER.jpg" alt="">
+                    <h3>WEB DEVELOPMENT</h3>
+                    <P>PORTFOLIO WEBSITE</P>
+                    <a style="color: hotpink;" href="#" class="code">Source Code</a>
+                </div>
+
+            </div>
+
+            <div class="container">
+                <div class="block">
+                    <img class="proj-img" src="graph.jpg" alt="">
+                    <h3>GRAPHIC DESIGNING</h3>
+                    <P>LOGO DESIGN</P>
+                    <a style="color: hotpink;" href="#" class="code">Source Code</a>
+                </div>
+
+                <div class="block">
+                    <img class="proj-img" src="XYZ.jpg" alt="">
+                    <h3>GRAPHIC DESIGNING</h3>
+                    <P>LOGO DESIGN</P>
+                    <a style="color: hotpink;" href="#" class="code">Source Code</a>
+                </div>
+
+                <div class="block">
+                    <img class="proj-img" src="LOGO.jpg" alt="">
+                    <h3>GRAPHIC DESIGNING</h3>
+                    <P>LOGO DESIGN</P>
+                    <a style="color: hotpink;" href="#" class="code">Source Code</a>
+                </div>
+
+            </div>
+        </section>-->
+       
+
+        <section class="seventhsection">
+            <div class="heading">
+                <h1 id="contact">Contact me</h1>
+                <hr class="head">
+            </div>
+
+            <div class="form-body">
+                <div class="form-left">
+                    <div class="form-left-data">
+
+                        <div class="form-left-text">
+                            <h4>Email</h4>
+                            <p>marahimazal@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="form-left-data">
+
+                        <div class="form-left-text">
+                            <h4>Whats App</h4>
+                            <p>+92 320 9392168</p>
+                        </div>
+
+                    </div>
+
+                    <div class="form-left-data">
+
+                        <div class="form-left-text">
+                            <h4>Visit Office</h4>
+                            <p>Sheikh Zayed Islamic Center Peshawar</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-right">
+                    <div class="form">
+
+                        <input type="text" name="fname" id="fname" placeholder="First name" required>
+                        <input type="text" name="lname" id="lname" placeholder="Last name" required>
+                        <br>
+                        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                        <br>
+                        <input type="tel" name="number" id="number" placeholder="Enter your phone number" required>
+                        <br>
+
+                        <textarea id="review" name="review" rows="6" cols="50" required>Message Us</textarea>
+                        <br>
+                        <input type="submit" value="Submit">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            <div class="row">
+
+                <div class="col">
+                    <a style="text-decoration: none; color: #fff; font-size: 1.5rem;" href="/">Marahim's Portfolio</a>
+                    <br><br>
+                    <p>Thank you for visiting my portfolio website. I hope you will appreciate my efforts to make my content accessible. </p>
+                </div>
+                <div class="col">
+                    <h3 style="font-size: 1.5rem;">Contact</h3>
+                    <br>
+
+                    <p>Sheikh Zayed Islamic Center, University of Peshawar</p>
+                    <br>
+                    <p class="email-id">marahimazal@gmail.com</p>
+                    <br>
+                    <p>+92 320 9392168</p>
+                </div>
+                <div class="col">
+                    <h3 style="font-size: 1.7rem;">Links</h3>
+                    <br>
+                    <ul>
+                   <LI> <a href="">HOME</a></LI>
+                    <li><a href="">ABOUT</a></li> 
+                    <li><a href="">SERVICES</a></li>                   
+                    <li><a href="">PROJECTS</a></li>
+                    <li><a href="">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <img src="map.png" alt="">
+                </div>
+            </div>
+
+        </footer>
+    </main>
+
+</body>
+
+</html>
